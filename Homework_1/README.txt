@@ -11,5 +11,7 @@ IP주소 뿐만 아니라 호스트와 호스트 사이 포트번호에서도 �
 정수 1을 4바이트를 가진 int 변수에 저장한다. 메모리에는 cpu의 엔디언 규칙에 따라서 저장됨.
 저장한 정수 value의 주소를 (unsigned char*)&value를 사용해 1바이트 단위로 캐스팅.
 Little Endian이면 value의 최하위 바이트가 낮은 주소에 저장 (*byte_ptr == 1), Big Endian이면 최상위 바이트가 낮은 주소에 저장(*byte_ptr == 0).
+
+-- 이건 알아보니까 리눅스랑 유닉스 환경에서만 사용 가능. 윈도우에서는 동작 안됨. --
 추가로 endian.h 라이브러리에 엔디안 확인을 위한 매크로가 정의되어 있다.
 (__BYTE_ORDER == __LITTLE_ENDIAN), (__BYTE_ORDER == __BIG_ENDIAN) 이 매크로를 통해 Little Endian인지 Big Endian인지 확인 할 수 있다.
